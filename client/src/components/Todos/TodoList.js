@@ -12,23 +12,28 @@ function TodoList() {
     }, []);
 
     async function getTodos() {
-        await axios.get("http://localhost:3001/api/v1/todos").then((res) => {
-            setTodos(res.data);
-        });
+        await axios
+            .get("https://lifeatio.herokuapp.com/api/v1/todos")
+            .then((res) => {
+                setTodos(res.data);
+            });
     }
 
     async function addTodo(todo) {
-        await axios.post("http://localhost:3001/api/v1/todos", todo);
+        await axios.post("https://lifeatio.herokuapp.com/api/v1/todos", todo);
         await getTodos();
     }
 
     async function deleteTodo(id) {
-        await axios.delete(`http://localhost:3001/api/v1/todos/${id}`);
+        await axios.delete(`https://lifeatio.herokuapp.com/api/v1/todos/${id}`);
         await getTodos();
     }
 
     async function updateTodo(todo) {
-        await axios.put(`http://localhost:3001/api/v1/todos/${todo.id}`, todo);
+        await axios.put(
+            `https://lifeatio.herokuapp.com/api/v1/todos/${todo.id}`,
+            todo
+        );
         await getTodos();
     }
 
