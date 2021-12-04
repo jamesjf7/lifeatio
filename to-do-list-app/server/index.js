@@ -1,5 +1,5 @@
 /** env */
-require("dotenv").config();
+// require("dotenv").config();
 
 /** library */
 const express = require("express");
@@ -19,4 +19,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/v1/todos", todo);
 app.use("/api/v1/users", user);
 
-app.listen(PORT, () => { console.log(`Listening on port ${PORT}!`); });
+app.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}!`);
+});
