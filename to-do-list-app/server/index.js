@@ -1,5 +1,5 @@
 /** env */
-// require("dotenv").config();
+require("dotenv").config();
 
 /** library */
 const express = require("express");
