@@ -1,6 +1,6 @@
 /** env */
 require("dotenv").config();
-
+console.log(process.env.PORT);
 /** library */
 const express = require("express");
 const cors = require("cors");
