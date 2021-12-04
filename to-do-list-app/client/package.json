@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build && echo ‘/* /index.html 200’ | cat >build/_redirects",
+    "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
